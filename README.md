@@ -1,11 +1,11 @@
-## 🛡️ InSURE: Real-Time Income Stabilization Engine
+## 🛡️ SheildRide: Real-Time Income Stabilization Engine
 **Protecting the Backbone of the Instant-Delivery Economy**
 
 ---
 
 ## Overview
 
-**InSURE** is a **parametric, AI-driven income protection platform** designed for instant delivery gig workers operating in ultra-fast logistics ecosystems such as Zepto, Blinkit, and Instamart.
+**SheildRide** is a **parametric, AI-driven income protection platform** designed for instant delivery gig workers operating in ultra-fast logistics ecosystems such as Zepto, Blinkit, and Instamart.
 
 Unlike traditional insurance systems that rely on **manual claims processing and post-event verification**, ShieldRide leverages **real-time data signals and automated decision systems** to:
 
