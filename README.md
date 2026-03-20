@@ -7,7 +7,6 @@
 ## 📋 Index
 
 - [Overview](#overview)
-- [Problem Statement](#problem-statement)
 - [Target Persona](#target-persona)
 - [Parametric Triggers & Payout Logic](#parametric-triggers--payout-logic)
   - [Environmental Triggers](#1-environmental-triggers)
@@ -42,21 +41,6 @@ Unlike traditional insurance systems that rely on **manual claims processing and
 - Stabilize earnings through predictive interventions
 
 > 💡 ShieldRide transforms insurance from a **reactive reimbursement model** into a **real-time financial safety net** for gig economies.
-
----
-
-## Problem Statement
-
-Gig workers in rapid delivery ecosystems operate in **highly dynamic and uncertain environments**, resulting in unstable income patterns.
-
-### Key Challenges
-
-| Challenge | Description |
-|---|---|
-| **Income Volatility** | Earnings fluctuate drastically due to demand variability |
-| **Lack of Risk Protection** | Sudden demand drops, platform outages, extreme weather disruptions |
-| **Limited Visibility** | No insights into high-demand zones, optimal working hours, or future income risks |
-| **Inefficient Traditional Insurance** | Slow claim processing, manual verification, not suited for real-time gig workflows |
 
 ---
 
