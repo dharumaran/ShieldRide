@@ -1,5 +1,5 @@
 ## 🛡️ InSURE: Real-Time Income Stabilization Engine
-**"Protecting the Backbone of the Instant-Delivery Economy"**
+**Protecting the Backbone of the Instant-Delivery Economy**
 
 ### 📌 Project Overview
 InSURE is a **parametric, AI-driven income protection system** tailored for instant-delivery gig workers (Zepto, Blinkit, Instamart). 
