@@ -1,5 +1,4 @@
 # InSURE
-# ShieldRide
 
 ### Real-Time Income Stabilization Engine for Instant Delivery Gig Workers
 
@@ -7,11 +6,11 @@
 
 ## Overview
 
-ShieldRide is a **parametric, AI-driven income protection system** designed specifically for **10-minute grocery delivery gig workers** (e.g., Zepto, Blinkit, Instamart).
+InSURE is a **parametric, AI-driven income protection system** designed for **instant delivery gig workers** (Zepto, Blinkit, Instamart).
 
-Unlike traditional insurance, which relies on manual claims and verification, ShieldRide uses **real-time data signals** (weather, demand, platform stability) to **automatically detect income disruption and trigger payouts or interventions**.
+Unlike traditional insurance systems, InSURE operates using **real-time data signals** (weather, demand, platform stability) to **detect disruptions and automatically trigger payouts**.
 
-The system not only compensates losses but also **predicts risk, guides worker decisions, and stabilizes earnings proactively**.
+It does not just compensate losses — it **predicts risk, guides worker decisions, and stabilizes earnings proactively**.
 
 ---
 
@@ -19,7 +18,7 @@ The system not only compensates losses but also **predicts risk, guides worker d
 
 Gig workers in instant delivery platforms face:
 
-* Highly **volatile income**
+* Highly volatile income
 * No protection against:
 
   * sudden demand drops
@@ -30,25 +29,25 @@ Gig workers in instant delivery platforms face:
   * where demand exists
   * when earnings will drop
 
-Traditional insurance models are too slow, manual, and not suited for **real-time gig economies**.
+Traditional insurance systems are too slow, manual, and not suited for **real-time gig economies**.
 
 ---
 
 ## Solution
 
-ShieldRide introduces a **parametric income protection model**:
+InSURE introduces a **parametric income protection model**:
 
-* Uses **external and platform data** to detect disruption events
-* Automatically triggers **instant payouts**
-* Provides **predictive movement insights**
-* Ensures a **minimum income floor**
+* Uses external and platform data to detect disruption events
+* Automatically triggers instant payouts
+* Provides predictive movement insights
+* Ensures a minimum income floor
 * Adapts to worker behavior and risk exposure
 
 ---
 
 ## Core Features
 
-### 1. Income Floor Guarantee
+### Income Floor Guarantee
 
 Ensures workers do not fall below a minimum earning threshold.
 
@@ -60,18 +59,18 @@ Payout = ₹50
 
 ---
 
-### 2. Income Stability Score (ISS)
+### Income Stability Score (ISS)
 
-A dynamic score that represents worker reliability and risk.
+A dynamic score representing worker reliability and risk.
 
-**Components:**
+**Components**
 
 * delivery consistency
 * activity levels
 * zone behavior
-* exposure to risk
+* risk exposure
 
-**Use Cases:**
+**Use Cases**
 
 * premium pricing
 * reward eligibility
@@ -79,7 +78,7 @@ A dynamic score that represents worker reliability and risk.
 
 ---
 
-### 3. Predictive Move-to-Earn Insights
+### Predictive Move-to-Earn Insights
 
 Recommends optimal zones based on:
 
@@ -89,65 +88,57 @@ Recommends optimal zones based on:
 
 Example:
 
-> “High risk of demand drop in Zone A. Move to Zone B (+35% demand, low risk).”
+> High risk of demand drop in Zone A. Move to Zone B (+35% demand, low risk).
 
 ---
 
-### 4. Dark Store Dependency Risk (SDR)
-
-Measures reliance on specific dark stores.
+### Dark Store Dependency Risk (SDR)
 
 ```
 SDR = Orders from top stores / Total orders
 ```
 
-If key stores go offline → automatic compensation triggered.
+If key stores go offline, compensation is automatically triggered.
 
 ---
 
-### 5. Fatigue-Aware Risk Adjustment
+### Fatigue-Aware Risk Adjustment
 
-Accounts for worker fatigue:
+Accounts for:
 
 * active hours
-* continuous working streak
+* continuous work duration
 * break patterns
 
-System adapts:
-
-* triggers earlier payouts
-* reduces risk burden
+System adapts by triggering earlier payouts and reducing risk burden.
 
 ---
 
-### 6. Smart Auto-Pause Protection
+### Smart Auto-Pause Protection
 
-Detects low-demand + high-risk conditions.
+Detects low-demand and high-risk conditions.
 
-Suggests:
+Suggestion:
 
-> “Go offline — partial compensation will be provided.”
+> Go offline — partial compensation will be provided.
 
 ---
 
-### 7. Cluster-Based Fairness Model
+### Cluster-Based Fairness Model
 
 Workers are grouped based on:
 
-* vehicle type (cycle vs bike)
-* work style (part-time/full-time)
+* vehicle type
+* work style
 * zone density
 
-Ensures:
-
-* fair premium pricing
-* equitable payouts
+Ensures fair premium pricing and equitable payouts.
 
 ---
 
-### 8. Streak Protection Bonus
+### Streak Protection Bonus
 
-Rewards consistent workers:
+Rewards consistent workers with:
 
 * higher income floor
 * lower premiums
@@ -155,7 +146,7 @@ Rewards consistent workers:
 
 ---
 
-### 9. Income Smoothing Wallet
+### Income Smoothing Wallet
 
 Balances earnings across time:
 
@@ -164,56 +155,52 @@ Balances earnings across time:
 
 ---
 
-### 10. Zone Saturation Control
-
-Prevents overcrowding from recommendations.
+### Zone Saturation Control
 
 ```
 ZSI = Active Riders / Expected Demand
 ```
 
-Limits movement suggestions when zones are saturated.
+Prevents overcrowding caused by movement recommendations.
 
 ---
 
 ## System Architecture
 
-### Step 1: Data Collection Layer
+### 1. Data Collection Layer
 
 Sources:
 
-* Weather API (OpenWeather)
-* Traffic API (Google Maps)
-* Platform Data (orders, uptime, store status)
+* Weather APIs
+* Traffic APIs
+* Platform data (orders, uptime, store status)
 
 ---
 
-### Step 2: Risk Feature Engineering
+### 2. Risk Feature Engineering
 
 Derived indices:
 
-* **Demand Index (DI)**
-* **Platform Stability Index (PSI)**
-* **Store Availability Index**
-* **Environmental Risk Index (ERI)**
+* Demand Index (DI)
+* Platform Stability Index (PSI)
+* Store Availability Index
+* Environmental Risk Index (ERI)
 
 ---
 
-### Step 3: Risk Index Engine
+### 3. Risk Index Engine
 
 ```
 DRI = w1(DVI) + w2(1 - PSI) + w3(ERI)
 ```
 
-Outputs a unified disruption risk score.
+Produces a unified disruption risk score.
 
 ---
 
-### Step 4: ML Risk Prediction
+### 4. ML Risk Prediction
 
-Model:
-
-* XGBoost / LightGBM
+* Model: XGBoost / LightGBM
 
 Output:
 
@@ -223,9 +210,7 @@ P(event) = probability of disruption
 
 ---
 
-### Step 5: Premium Calculation
-
-Hybrid model:
+### 5. Premium Calculation
 
 ```
 Expected Loss = P(event) × payout  
@@ -234,7 +219,7 @@ Premium = Expected Loss + margin
 
 ---
 
-### Step 6: Real-Time Monitoring
+### 6. Real-Time Monitoring
 
 * Event-driven architecture
 * Sliding window analysis
@@ -242,9 +227,7 @@ Premium = Expected Loss + margin
 
 ---
 
-### Step 7: Parametric Trigger Engine
-
-Example triggers:
+### 7. Parametric Trigger Engine
 
 ```
 if ERI > threshold → weather trigger  
@@ -254,17 +237,15 @@ if DVI > threshold → demand drop
 
 ---
 
-### Step 8: Fraud Detection
+### 8. Fraud Detection
 
 * Cross-verification of APIs
-* anomaly detection (Isolation Forest)
-* time consistency checks
+* Anomaly detection (Isolation Forest)
+* Time consistency checks
 
 ---
 
-### Step 9: Automated Payout System
-
-Flow:
+### 9. Automated Payout System
 
 ```
 Trigger detected  
@@ -288,50 +269,46 @@ Trigger detected
 
 ### Data & Streaming
 
-* Apache Kafka (optional)
 * REST APIs
+* Apache Kafka (optional)
 
 ### Machine Learning
 
 * Python
-* Scikit-learn / XGBoost
+* Scikit-learn
+* XGBoost
 
 ### Database
 
 * PostgreSQL
-* InfluxDB (time-series)
+* InfluxDB
 
 ---
 
 ## Installation & Setup
 
-### 1. Clone Repository
+### Clone Repository
 
-```
-git clone https://github.com/your-repo/shieldride.git
-cd shieldride
+```bash
+git clone https://github.com/your-repo/insure.git
+cd insure
 ```
 
 ---
 
-### 2. Backend Setup
+### Backend Setup
 
-```
+```bash
 cd backend
 pip install -r requirements.txt
-```
-
-Run server:
-
-```
 uvicorn main:app --reload
 ```
 
 ---
 
-### 3. Frontend Setup
+### Frontend Setup
 
-```
+```bash
 cd frontend
 npm install
 npm run dev
@@ -339,9 +316,9 @@ npm run dev
 
 ---
 
-### 4. Environment Variables
+### Environment Variables
 
-Create `.env` file:
+Create a `.env` file:
 
 ```
 WEATHER_API_KEY=your_key
@@ -351,56 +328,26 @@ DATABASE_URL=your_db_url
 
 ---
 
-## Dependencies
+## Execution Flow
 
-### Python
-
-* fastapi
-* uvicorn
-* pandas
-* numpy
-* scikit-learn
-* xgboost
-* requests
-
-### Node (if used)
-
-* express
-* axios
-* dotenv
-
-### Frontend
-
-* react
-* tailwindcss
-* axios
-
----
-
-## How It Runs (Execution Flow)
-
-1. APIs fetch real-time data (weather, traffic, platform)
-2. Backend processes and computes risk indices
+1. APIs fetch real-time data
+2. Backend computes risk indices
 3. ML model predicts disruption probability
 4. Trigger engine evaluates conditions
 5. If triggered:
 
-   * payout calculated
-   * fraud checks applied
-   * payment executed
-6. Frontend displays:
-
-   * earnings insights
-   * movement recommendations
-   * risk levels
+   * payout calculation
+   * fraud validation
+   * payment execution
+6. Frontend displays insights, recommendations, and risk levels
 
 ---
 
 ## Future Scope
 
-* Blockchain-based transparent payouts
+* Blockchain-based payout transparency
 * Federated learning for privacy
-* Satellite weather integration
+* Satellite-based weather integration
 * Cross-platform gig aggregation
 * Real-time earnings heatmaps
 
@@ -408,16 +355,10 @@ DATABASE_URL=your_db_url
 
 ## Positioning
 
-ShieldRide is not just insurance.
-
-It is a:
-
-> **Real-time income stabilization and decision intelligence system for gig workers**
+InSURE is a **real-time income stabilization and decision intelligence system** for gig workers.
 
 ---
 
 ## License
 
 MIT License
-
----
