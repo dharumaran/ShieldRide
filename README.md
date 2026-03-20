@@ -29,14 +29,23 @@ InSURE eliminates "claims" entirely. By monitoring a **Risk Index Engine**, the 
 ### 🧠 Core Innovation: The AI Engine
 We don't just react; we predict.
 
-**1. Income Floor Guarantee**
-If the actual earnings ($E_a$) fall below the guaranteed floor ($F_i$) due to external disruption:
-$$\text{Payout} = \max(0, F_i - E_a)$$
+1. Income Floor Guarantee
+If the actual earnings E_a fall below the guaranteed floor F_i due to external disruption:
 
-**2. Disruption Risk Index (DRI)**
+Payout = max(0, F_i - E_a)
+
+2. Disruption Risk Index (DRI)
 Our model calculates a unified risk score using:
-$$DRI = w_1(DVI) + w_2(1 - PSI) + w_3(ERI)$$
-*Where $DVI$ = Demand Volatility, $PSI$ = Platform Stability, $ERI$ = Environmental Risk.*
+
+DRI = w1(DVI) + w2(1 - PSI) + w3(ERI)
+
+Where:
+
+DVI = Demand Volatility Index
+
+PSI = Platform Stability Index
+
+ERI = Environmental Risk Index
 
 **3. Fraud & Fairness**
 * **Isolation Forest:** Used for real-time anomaly detection to prevent "GPS spoofing" for payouts.
