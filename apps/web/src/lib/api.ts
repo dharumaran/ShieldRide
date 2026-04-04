@@ -1,7 +1,35 @@
 import type { RiskScoreResult, TriggerActive } from '@shieldride/shared'
-import axios, { type AxiosError, type AxiosResponse } from 'axios'
+import axios, { type AxiosError, type AxiosResponse, type InternalAxiosRequestConfig } from 'axios'
 import type { ApiEnvelope, IncomeDay, PayoutRow, SensorLatest, WorkerProfile } from '@/types'
 import { useWorkerStore } from '@/stores/workerStore'
+
+function resolvedRequestUrl(cfg: InternalAxiosRequestConfig): string {
+  const path = (cfg.baseURL ?? '') + (cfg.url ?? '')
+  if (path.startsWith('http')) return path
+  if (typeof window !== 'undefined') {
+    try {
+      return new URL(path, window.location.origin).href
+    } catch {
+      return path
+    }
+  }
+  return path || '(unknown URL)'
+}
+
+function bodySnippet(body: unknown): string {
+  if (body == null) return '(empty body)'
+  if (typeof body === 'string') {
+    const t = body.trim().slice(0, 160)
+    return body.includes('<!DOCTYPE') || body.includes('<html')
+      ? `HTML document (${t.length} chars shown): ${t}…`
+      : `text: ${t}${body.length > 160 ? '…' : ''}`
+  }
+  try {
+    return JSON.stringify(body).slice(0, 200)
+  } catch {
+    return String(body)
+  }
+}
 
 // Development: always use same-origin `/api` so Vite proxies to the API (vite.config server.proxy).
 // Avoid VITE_API_URL=http://localhost:3001 in dev — that bypasses the proxy and fails with ERR_NETWORK if the API is down.
@@ -53,14 +81,18 @@ export async function unwrap<T>(p: Promise<AxiosResponse<unknown>>): Promise<T> 
       return body.data as T
     }
 
+    const reqUrl = resolvedRequestUrl(res.config)
+    const method = (res.config.method ?? 'get').toUpperCase()
+
     if (res.status === 404) {
+      const hint = import.meta.env.DEV
+        ? 'Local: run `npm run dev:web` from repo root (API on :3001, Vite proxies /api). Do not open `dist/` as static files.'
+        : 'Production: redeploy web so `vercel.web.json` /api rewrites apply, set VITE_API_URL at build, or hard-refresh and unregister the PWA service worker (old bundles cache this error).'
       throw new Error(
-        import.meta.env.DEV
-          ? 'API returned 404. Start the API on port 3001 (e.g. `npm run dev:web` from repo root). OTP is demo-only — no SMS provider is required.'
-          : 'API route not found on this host. Deploy the web app with Vercel/Netlify rewrites to your API (see apps/web/vercel.json), or build with VITE_API_URL set to your API origin. OTP is simulated in-app (use 123456); no external SMS API is required.',
+        `API 404 for ${method} ${reqUrl}. ${hint} Body: ${bodySnippet(body)}`,
       )
     }
-    throw new Error(`Request failed (${res.status})`)
+    throw new Error(`Request failed ${method} ${reqUrl} → HTTP ${res.status}. Body: ${bodySnippet(body)}`)
   } catch (e) {
     const ax = e as AxiosError<ApiEnvelope<unknown>>
     if (ax.response?.data && isEnvelope(ax.response.data) && ax.response.data.error) {

@@ -16,6 +16,16 @@ export default defineConfig({
         display: 'standalone',
         start_url: '/',
       },
+      // Never let the service worker cache or intercept API calls (fixes false "API not found" / stale 404).
+      workbox: {
+        navigateFallbackDenylist: [/^\/api/],
+        runtimeCaching: [
+          {
+            urlPattern: ({ url }) => url.pathname.startsWith('/api'),
+            handler: 'NetworkOnly',
+          },
+        ],
+      },
     }),
   ],
   resolve: {
