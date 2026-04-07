@@ -8,10 +8,9 @@
 <div align="center">
 
 <img src="https://img.shields.io/badge/Guidewire-DEVTrails%202026-0057B8?style=for-the-badge" alt="Guidewire DEVTrails 2026"/>
-<img src="https://img.shields.io/badge/Phase-2%20%7C%20Sprout-22c55e?style=for-the-badge" alt="Phase 2"/>
+<img src="https://img.shields.io/badge/Phase-2%20%7C%20Scale-22c55e?style=for-the-badge" alt="Phase 2"/>
 <img src="https://img.shields.io/badge/Persona-Q--Commerce%20%7C%20Zepto%20·%20Blinkit-f97316?style=for-the-badge" alt="Persona"/>
-<img src="https://img.shields.io/badge/AI-Claude%20claude--sonnet--4--20250514-6366f1?style=for-the-badge" alt="Claude AI"/>
-<img src="https://img.shields.io/badge/Coverage-Income%20Loss%20Only-dc2626?style=for-the-badge" alt="Coverage Scope"/>
+
 
 ```
  ____  _   _ ___ _____ _     ____  ____  ___ ____  _____
